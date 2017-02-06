@@ -1,0 +1,3 @@
+[submodule "themes/tranquilpeak-gbolo"]
+	path = themes/tranquilpeak-gbolo
+	url = https://github.com/gbolo/hugo-tranquilpeak-theme.git
