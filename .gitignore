@@ -1,2 +1,5 @@
 # ignore public
 public/*
+
+# ignore test theme
+themes/test
