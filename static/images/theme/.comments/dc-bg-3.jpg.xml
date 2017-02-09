@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comment version="3.0">
+  <caption>Server</caption>
+  <note>Network servers in a data center. Swallow depth of Field</note>
+  <place/>
+  <categories>
+    <category value="technology"/>
+    <category value="supercomputer"/>
+    <category value="server farm"/>
+    <category value="data center"/>
+    <category value="analytics"/>
+    <category value="Web Server"/>
+    <category value="Virtualization"/>
+    <category value="Server Rack"/>
+    <category value="Server Cluster"/>
+    <category value="Rack"/>
+    <category value="Network Server"/>
+    <category value="Network Room"/>
+    <category value="Mainframe"/>
+    <category value="Internet"/>
+    <category value="Information Equipment"/>
+    <category value="Hard Drive"/>
+    <category value="Data Mining"/>
+    <category value="Data"/>
+    <category value="Computer Network"/>
+    <category value="Computer Lab"/>
+    <category value="Computer Equipment"/>
+    <category value="Computer"/>
+    <category value="Cloud Server"/>
+    <category value="CPU"/>
+  </categories>
+</comment>
