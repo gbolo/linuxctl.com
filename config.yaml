@@ -5,6 +5,7 @@ languageCode: "en-us"
 title: "linuxctl.com $_"
 baseurl: "https://linuxctl.com/"
 disqusShortname: "linuxctl"
+googleAnalytics: "UA-91839629-1"
 canonifyurls: false
 
 theme: "tranquilpeak-gbolo"
@@ -27,7 +28,7 @@ author:
   gravatarEmail: "george.bolo@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  ## picture: "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture: "/images/theme/gbolo-icon.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter:"thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
