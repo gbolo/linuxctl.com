@@ -3,11 +3,12 @@
 defaultContentLanguage: "en-us"
 languageCode: "en-us"
 title: "linuxctl.com $_"
-baseurl: "https://blog.linuxctl.com/"
+baseurl: "https://linuxctl.com/"
 disqusShortname: "linuxctl"
+canonifyurls: false
 
-#theme: "tranquilpeak-gbolo"
-theme: "test"
+theme: "tranquilpeak-gbolo"
+#theme: "test"
 
 permalinks:
   post: "/:year/:month/:slug/"
@@ -19,7 +20,7 @@ taxonomies:
 
 author:
   name: "gbolo"
-  bio: "DevOps Engineer"
+  bio: "Security + DevOps Engineer"
   job: "DevOps Engineer"
   location: "Toronto"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
