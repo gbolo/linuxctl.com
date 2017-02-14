@@ -16,7 +16,6 @@ title: "Hardening Nginx"
 thumbnailImagePosition: "left"
 thumbnailImage: "/images/thumb/thumb-nginx.jpg"
 
-draft: true
 ---
 
 [Nginx](https://www.nginx.com/resources/wiki/) is a great web server which offers very high performance with little resource consumption. This makes it ideal for docker containers, small embedded devices, or even just dealing with a ton of connections. I also often use Nginx's powerful proxy capabilities. Nginx is one of those applications I use quite often, pretty much for anything related to `http(s)`. Having said that, it becomes very important for me to be able to deploy this in a secure manner.
