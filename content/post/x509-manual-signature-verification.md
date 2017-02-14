@@ -26,16 +26,16 @@ While going through the manual of [openssl](https://www.openssl.org/docs/man1.1.
 <!-- toc -->
 
 # What Does "Signing a Certificate" Mean?
-A **Certificate Authority (CA)** utilizes **asymmetric cryptography** to form a key pair. This key pair id usually referred to as the *public* key and the **private** key. Messages encrypted with one key, can only be decrypted with the other key. The public key is advertised and known to all, however the private key is kept secret and should only been known by the CA. When a **Certificate Authority (CA)** signs a certificate, what it actually does is **hash** the certificate then **encrypt that hash** with it's private key. This hex code is then embedded into the certificate along with information on how it was derived called the `Signature Algorithm`. Therefore, in order for one to **verify** that a certificate was signed by a specific CA, we would only need to possess the following:
+A **Certificate Authority (CA)** utilizes **asymmetric cryptography** to form a key pair. This key pair is usually referred to as the *public* key and the **private** key. Messages encrypted with one key, can only be decrypted with the other key. The public key is advertised and known to all, however the private key is kept secret and should only been known by the CA. When a **Certificate Authority (CA)** signs a certificate, what it actually does is **hash** the certificate then **encrypt that hash** with it's private key. This hex code is then embedded into the certificate along with information on how it was derived called the `Signature Algorithm`. Therefore, in order for one to **verify** that a certificate was signed by a specific CA, we would only need to possess the following:
 
 > * the public key of the CA (issuer)
-> * the **Signature Algorithm** used to generate signature
+> * the **Signature** and **Algorithm** used to generate signature
 
 # The Verification Process
 Obtaining the two listed items above is not a difficult task. Let's examine how we would do this manually
 
 ## Obtaining the Issuer's Public Key
-The issuer of a x.509 certificate should have it's own x.509 certificate (that's also signed if it's an Intermediate CA) to prove it's authenticity. Once obtaining this certificate, we can extract the public key with the following `openssl` command:
+The issuer of a x.509 certificate should have it's own x.509 certificate (that's also signed if it's an Intermediate CA, or slef signed if Root CA) to prove it's authenticity. Once obtaining this certificate, we can extract the public key with the following `openssl` command:
 ```bash
 openssl x509 -in /tmp/rsa-4096-x509.pem -noout -pubkey > /tmp/issuer-pub.pem
 ```
