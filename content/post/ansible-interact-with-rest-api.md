@@ -10,7 +10,7 @@ tags:
   - "rest api"
   - "devops"
   - "sensu"
-date: "2017-01-08"
+date: "2017-01-20"
 title: "Ansible - Interacting with external REST API"
 thumbnailImagePosition: "left"
 thumbnailImage: "/images/thumb/thumb-ansible.jpg"
@@ -125,7 +125,7 @@ We want to first list if our vhost is already present. If it is not, the REST en
 Running this playbook produces the correct result; It will add the vhost if not present, but will skip it if present:
 
 ```
-$ ansible-playbook rabbitmq-api-playbook.yml 
+$ ansible-playbook rabbitmq-api-playbook.yml
 
 PLAY [localhost] ***************************************************************
 
@@ -135,19 +135,19 @@ ok: [localhost]
 TASK [debug] *******************************************************************
 ok: [localhost] => {
     "request_vhost": {
-        "changed": false, 
-        "content_length": "55", 
-        "content_type": "application/json", 
-        "date": "Fri, 10 Feb 2017 21:21:18 GMT", 
+        "changed": false,
+        "content_length": "55",
+        "content_type": "application/json",
+        "date": "Fri, 10 Jan 2017 21:21:18 GMT",
         "json": {
-            "error": "Object Not Found", 
+            "error": "Object Not Found",
             "reason": "\"Not Found\"\n"
-        }, 
-        "msg": "HTTP Error 404: Object Not Found", 
-        "redirected": false, 
-        "server": "MochiWeb/1.1 WebMachine/1.10.0 (never breaks eye contact)", 
-        "status": 404, 
-        "url": "http://127.0.0.1:15672/api/vhosts/sensu", 
+        },
+        "msg": "HTTP Error 404: Object Not Found",
+        "redirected": false,
+        "server": "MochiWeb/1.1 WebMachine/1.10.0 (never breaks eye contact)",
+        "status": 404,
+        "url": "http://127.0.0.1:15672/api/vhosts/sensu",
         "vary": "Accept-Encoding, origin"
     }
 }
@@ -159,7 +159,7 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=3    changed=0    unreachable=0    failed=0   
 
 # Running a second time, skips the step called "create vhost"
-$ ansible-playbook rabbitmq-api-playbook.yml 
+$ ansible-playbook rabbitmq-api-playbook.yml
 
 PLAY [localhost] ***************************************************************
 
@@ -169,20 +169,20 @@ ok: [localhost]
 TASK [debug] *******************************************************************
 ok: [localhost] => {
     "request_vhost": {
-        "cache_control": "no-cache", 
-        "changed": false, 
-        "content_length": "32", 
-        "content_type": "application/json", 
-        "date": "Fri, 10 Feb 2017 21:23:39 GMT", 
+        "cache_control": "no-cache",
+        "changed": false,
+        "content_length": "32",
+        "content_type": "application/json",
+        "date": "Fri, 10 Jan 2017 21:23:39 GMT",
         "json": {
-            "name": "sensu", 
+            "name": "sensu",
             "tracing": false
-        }, 
-        "msg": "OK (32 bytes)", 
-        "redirected": false, 
-        "server": "MochiWeb/1.1 WebMachine/1.10.0 (never breaks eye contact)", 
-        "status": 200, 
-        "url": "http://127.0.0.1:15672/api/vhosts/sensu", 
+        },
+        "msg": "OK (32 bytes)",
+        "redirected": false,
+        "server": "MochiWeb/1.1 WebMachine/1.10.0 (never breaks eye contact)",
+        "status": 200,
+        "url": "http://127.0.0.1:15672/api/vhosts/sensu",
         "vary": "Accept-Encoding, origin"
     }
 }
