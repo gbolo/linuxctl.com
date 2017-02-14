@@ -33,13 +33,13 @@ Unfortunatly, it appears that all these modules cannot interact with remote rabb
 
 Now we can simply bring up this rabbitmq docker container and explore the API:
 
-```
+```bash
 docker run -d --name rabbitmq-mgmt1 -p 127.0.0.1:15672:15672 rabbitmq:3.6-management-alpine
 ```
 
 We can use curl to take a look at the vhosts and users:
 
-```
+```bash
 $ curl -s -u guest:guest http://127.0.0.1:15672/api/vhosts | python -m json.tool
 [
     {
@@ -124,7 +124,7 @@ We want to first list if our vhost is already present. If it is not, the REST en
 
 Running this playbook produces the correct result; It will add the vhost if not present, but will skip it if present:
 
-```
+```bash
 $ ansible-playbook rabbitmq-api-playbook.yml
 
 PLAY [localhost] ***************************************************************
@@ -194,7 +194,7 @@ PLAY RECAP *********************************************************************
 localhost                  : ok=2    changed=0    unreachable=0    failed=0  
 ```
 
-Fortunatly, the same logic is needed for creating a user is similiar but requires us to send a body in `json` format for `PUT` requests. Personaly, I love `yaml` and prefer to represent my variables in `yaml` format, then convert the dictionary to `json` format with a filter called `to_json`. The tasks looks like this:
+Fortunately, the same logic is needed for creating a user is similar but requires us to send a body in `json` format for `PUT` requests. Personally, I love `yaml` and prefer to represent my variables in `yaml` format, then convert the dictionary to `json` format with a filter called `to_json`. The tasks looks like this:
 
 {{< codeblock "rabbitmq-api-playbook.yml" "yaml" >}}
     - name: create user
@@ -213,7 +213,8 @@ Fortunatly, the same logic is needed for creating a user is similiar but require
 {{< /codeblock >}}
 
 ## The Finished Playbook
-OK great! Notice how we have to set the `HEADER_Content-Type` parameter, and how we convert the `rabbitq_user_sensu_request_body` variable to json format. Now we can put everything together and create the full playbook:
+OK great! Notice how we have to set the `HEADER_Content-Type` parameter, and how we convert the `rabbitq_user_sensu_request_body` variable to json format. Now we can put everything together and create the full playbook. Also the great thing about this playbook is that its **idempotent**. We can run it many times without it changing anything unless the change is needed.
+
 {{< codeblock "rabbitmq-api-playbook.yml" "yaml" >}}
 ---
 
@@ -327,4 +328,4 @@ OK great! Notice how we have to set the `HEADER_Content-Type` parameter, and how
         - request_permission.status == 404
 {{< /codeblock >}}
 
-The great thing about this playbook is that its **idempotence**. We can run it many times without it changing anything unless the change is needed.
+Ideally, you would create a role for this. Perhaps I will show that in another future post.
