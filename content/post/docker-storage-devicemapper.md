@@ -12,7 +12,7 @@ tags:
 date: "2016-04-18"
 title: "Docker Storage Driver - Devicemapper"
 thumbnailImagePosition: "left"
-thumbnailImage: "/images/thumb/thumb-docker.jpg"
+thumbnailImage: "/images/thumb/thumb-docker.png"
 
 ---
 

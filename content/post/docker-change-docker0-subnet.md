@@ -11,7 +11,7 @@ tags:
 date: "2016-02-02"
 title: "Docker Networking - Change docker0 Subnet"
 thumbnailImagePosition: "left"
-thumbnailImage: "/images/thumb/thumb-docker.jpg"
+thumbnailImage: "/images/thumb/thumb-docker.png"
 
 ---
 

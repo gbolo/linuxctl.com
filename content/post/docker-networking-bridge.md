@@ -11,7 +11,7 @@ tags:
 date: "2016-03-16"
 title: "Docker Networking Options - Bridge"
 thumbnailImagePosition: "left"
-thumbnailImage: "/images/thumb/thumb-docker.jpg"
+thumbnailImage: "/images/thumb/thumb-docker.png"
 
 ---
 
