@@ -13,6 +13,10 @@ title: "Docker Networking - Change docker0 Subnet"
 thumbnailImagePosition: "left"
 thumbnailImage: "/images/thumb/thumb-docker.png"
 
+# url of old site
+aliases:
+  - "/docker-networking-change-docker0-subnet"
+  
 ---
 
 When you install docker, by default it will create a bridged interface `docker0` with a `172.17.0.0/16` subnet for container networking. It will also create a **MASQUERADE** rule on your **POSTROUTING** iptables chain for container NAT. If this subnet is being used elsewhere on your network, then you should change this default subnet to avoid losing connectivity to these other networks:

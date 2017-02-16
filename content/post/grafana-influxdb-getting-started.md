@@ -14,6 +14,10 @@ title: "Grafana & InfluxDB - Getting Started"
 thumbnailImagePosition: "left"
 thumbnailImage: "/images/thumb/thumb-grafana.jpg"
 
+# url of old site
+aliases:
+  - "/influxdb-with-grafana-getting-started"
+
 ---
 
 [InfluxDB](https://influxdata.com/) is a great time-series database for storing server performance metrics like CPU load, memory utilization, network usage, etc. Unlike traditional relational databases like mysql, InfluxDB can store this data in a much smaller amount of disk space while returning the data at much faster rate.

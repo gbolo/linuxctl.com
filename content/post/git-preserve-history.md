@@ -11,6 +11,10 @@ title: "Git - preserve history when moving files"
 thumbnailImagePosition: "left"
 thumbnailImage: "/images/thumb/thumb-github.jpg"
 
+# url of old site
+aliases:
+  - "/git-preserve-history-when-moving-files"
+
 ---
 
 When moving files/directories around in a git repo, the version history of the file gets lost! Let's fix that.

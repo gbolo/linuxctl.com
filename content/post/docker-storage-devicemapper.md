@@ -14,6 +14,10 @@ title: "Docker Storage Driver - Devicemapper"
 thumbnailImagePosition: "left"
 thumbnailImage: "/images/thumb/thumb-docker.png"
 
+# url of old site
+aliases:
+  - "/docker-storage-driver-devicemapper"
+
 ---
 
 Docker relies on storage engines to layer images. The default storage driver depends on who packaged docker for your OS. Fortunately, it's not too difficult to change; However you may lose your images and containers so it's best to decide on a driver when you begin.
