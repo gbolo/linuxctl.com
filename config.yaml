@@ -76,10 +76,10 @@ menu:
       pre: "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
       url: "https://github.com/gbolo"
     - weight: 2
-      identifier: "stackoverflow"
-      name: "Stack Overflow"
+      identifier: "stackexchange"
+      name: "Stack Exchange"
       pre: "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-      url: "http://stackoverflow.com/users/7092229/gbolo"
+      url: "http://stackexchange.com/users/9546265/gbolo?tab=accounts"
     - weight: 3
       identifier: "dockerhub"
       name: "Docker Hub"
