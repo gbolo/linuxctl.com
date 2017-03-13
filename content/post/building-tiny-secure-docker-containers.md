@@ -82,6 +82,9 @@ docker run --rm -p 8080:8080 tinyapi
 ####  docker run --rm -p 8080:8080 gbolo/tinyapi:v0.1
 ```
 
+Taking a look at the `Dockerfile`:
+<script src="https://gist.github.com/gbolo/054e0c295089fa604f5aee2513dd8e8b.js"></script>
+
 Once the docker container is ready, you can open another console and hit it's various endpoints:
 
 ```bash
