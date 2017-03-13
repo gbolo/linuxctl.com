@@ -24,6 +24,7 @@ It's very tempting to use the most popular Linux distributions as a base for doc
 
 # Are Size and Security Related?
 A security chief once told me something along these lines:
+
 > Security is layered like an onion
 
 Funny enough, this reminds me of the layers of a docker image. Lowering your attack vector is essential to security. Generally speaking, **the more libraries and binaries you have installed on your system, the greater the odds that your system will be susceptible to vulnerabilities discovered tomorrow** (all things being equal). Obviously, there is no **silver bullet** for security, but any hardening guide I ever read always emphasised that:
@@ -54,7 +55,7 @@ Let's compare image sizes of the most popular base OS images on [dockerhub](http
 It's no surprise that **most offcial images on the docker hub now include an alpine version!** Not only is the base image anymore between **20 to 35 times smaller** but also contains far less known vulnerabilities of type critical or major.
 
 # How Small can a Container Get?
-Using [Alpine Linux](https://hub.docker.com/r/library/alpine/) as your base image can produce pretty small images. However, applications written in languages that can be statically compiled down to a single binary can often make the smallest of container images. This is because **you don't actually need any external libraries for statically compiled applications and can therefore usually skip choosing a base image from above and instead create a docker container from SCRATCH**. Let's take a modern language like [Golang](https://golang.org/) for example (which is getting extremely popular!). Let's create a tiny container for a [test web application](https://github.com/gbolo/go-tinyapi) I wrote in Go to learn the language. **Side note:** If you interested in learning go, I highly recommend [this udemy online course](https://www.udemy.com/learn-how-to-code/) which is taught by gopher [Todd McLeod](https://github.com/GoesToEleven)
+Using [Alpine Linux](https://hub.docker.com/r/library/alpine/) as your base image can produce pretty small images. However, applications written in languages that can be statically compiled down to a single binary can often make the smallest of container images. This is because **you don't actually need any external libraries for statically compiled applications and can therefore usually skip choosing a base image from above and instead create a docker container from SCRATCH**. Let's take a modern language like [Golang](https://golang.org/) for example (which is getting extremely popular!). Let's create a tiny container for a [test web application](https://github.com/gbolo/go-tinyapi) I wrote in Go to learn the language. **Side note:** If you interested in learning go, I highly recommend [this udemy online course](https://www.udemy.com/learn-how-to-code/) which is taught by gopher [Todd McLeod](https://github.com/GoesToEleven).
 
 ## Building a container image from SCRATCH
 You might be surprised to know that a docker container can function with just a binary in it. Remember that a docker container is **essentially just a process.** Sometimes, just a set of processes. The kernel is provided by the Host Operating System. It also doesn't need all the stuff your Host OS contains such as `ssh`, `systemd`, `syslog`, exc. Let's demonstrate this:
