@@ -16,7 +16,7 @@ thumbnailImage: "/images/thumb/thumb-syncthing.png"
 
 ---
 
-Choosing a secure file syncing application has never been easier. After evaluating a variety of options such [Dropbox](https://www.dropbox.com), [OwnCloud](https://owncloud.org/), and [Seafile](https://www.seafile.com) for over 5 years, the journey is finally over. I have found the best option - [Syncthing](https://syncthing.net). Let me explain why you should consider it.
+Choosing a secure file syncing application has never been easier. After evaluating a variety of options such [Dropbox](https://www.dropbox.com), [OwnCloud](https://owncloud.org/), and [Seafile](https://www.seafile.com) for **over 5 years**, the journey is finally over. I have found the best option - [Syncthing](https://syncthing.net). Let me explain why you should consider it.
 <!--more-->
 
 <!-- toc -->
@@ -25,11 +25,11 @@ Choosing a secure file syncing application has never been easier. After evaluati
 Before I get into why I feel [Syncthing](https://syncthing.net) is the best option for a self-hosted syncing solution, let me give an account of my history with syncing software.
 
 ## Start of the Journey - DropBox
-Looking through my email inbox, I found the welcome email I received when I first joined Dropbox. It was delivered in 2011, and I remember how much I loved it back then. Finally, I had a convenient way to sync files across all my computers. Life was easier back then, **ignorance was bliss.** I was happy for a while, but when I started running my own server at home full time, I began thinking:
+Looking through my email inbox, I found the welcome email I received when I first joined Dropbox. **It was delivered in 2011,** and I remember how much I loved it back then. Finally, I had a convenient way to sync files across all my computers. Life was easier back then, **ignorance was bliss.** I was happy for a while, but when I started running my own server at home full time, I began thinking:
 
 > I have my Linux box at home with all this free storage available doing almost nothing. why don't I start using it for my syncing needs?
 
-This immediately made me thing of the potential benefits of self-hosting options:
+This immediately made me think of the potential benefits of the self-hosted options:
 
 - **All-you-can-eat storage** for free!
 - I can put some **sensitive/personal files** in my shares, and not worry about it being in the cloud.
@@ -44,9 +44,7 @@ My first foray into te self-hosted options was OwnCloud. I believe at the time i
 I have nothing against PHP, in fact I have written most of my web applications in PHP and I know it very well. But, for what ever reason, I found OwnCloud to be slow at times.
 
 ### Sync conflicts
-This would happen often enough, that I had to create a script to periodically run across my shares to scan for them.
-
-I will cut OwnCloud some slack, after all they were kind of pioneers in this. It served my needs for two years but it was time to try something else.
+This would happen often enough, that I had to create a script to periodically run across my shares to scan for them. I will cut OwnCloud some slack, after all they were kind of pioneers in this area. It served my needs for two years but it was time to try something else.
 
 ## My two years with SeaFile
 I divorced OwnCloud and married SeaFile in **just an afternoon.** Although the installation of SeaFile was significantly more involved, I had already become a talented Linux System Administrator by then. Fronted with `nginx`, and secured with legitimately trusted TLS certificates obtained for free thanks to [Let's Encrypt](https://linuxctl.com/2016/05/lets-encrypt-muli-domain-across-unique-ips/), I didn't think it could get much better than this. **Speed was much improved** and the whole experience just felt more polished. Things were great, but as my knowledge in the field grew so did my concerns. Although I had control of the in-transit security with TLS terminated on my nginx VM, **authentication was still handled by username and password.** Also the Android app wasn't the greatest and would occasionally failed to sync all my photos properly. The last straw was when [SeaFile split into two](https://forum.syncwerk.com/t/reason-for-removing-statements-and-forum-thread-regarding-split-up-between-Syncwerk-gmbh-and-Syncwerk-ltd/5637/4) due to some bizarre conflict between two companies.
