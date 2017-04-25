@@ -25,13 +25,14 @@ Choosing a secure file syncing application has never been easier. After evaluati
 Before I get into why I feel [Syncthing](https://syncthing.net) is the best option for a self-hosted syncing solution, let me give an account of my history with syncing software.
 
 ## Start of the Journey - DropBox
-Looking through my email inbox, I found the welcome email I received when I first joined Dropbox. It was delivered in 2011, and I remember how much I loved it back then. Finally, I had a convenient way to sync files across all my computers. Life was easier back then, ignorance was bliss. I was happy for a while, but when I started running my own server at home full time, I began thinking:
+Looking through my email inbox, I found the welcome email I received when I first joined Dropbox. It was delivered in 2011, and I remember how much I loved it back then. Finally, I had a convenient way to sync files across all my computers. Life was easier back then, **ignorance was bliss.** I was happy for a while, but when I started running my own server at home full time, I began thinking:
 
-> I have my Linux box at home with all this free storage available, why don't I start it for my syncing needs?
+> I have my Linux box at home with all this free storage available doing almost nothing. why don't I start using it for my syncing needs?
 
 This immediately made me thing of the potential benefits of self-hosting options:
-- All-you-can-eat storage for free!
-- I can put some sensitive/personal files in my shares, and not worry about it being in the cloud.
+
+- **All-you-can-eat storage** for free!
+- I can put some **sensitive/personal files** in my shares, and not worry about it being in the cloud.
 - Gain experience/knowledge with this type of use case.
 
 Of course, I didn't think much about the issues I may run into.
