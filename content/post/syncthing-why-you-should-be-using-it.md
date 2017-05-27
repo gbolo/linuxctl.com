@@ -71,4 +71,4 @@ Unlike SeaFile or OwnCloud, **Syncthing's purpose is only to sync files!** There
 Last but not least, cross platform! While the other products were also cross platform (for server side), it's great to know that **the exact same code base is being used on all platforms** since there is no separate code base for clients and servers. As a result, my Android app for Syncthing works perfectly. I guess Golang has a bit to do with this as well, but it also speaks volumes of the great design of Syncthing.
 
 # TL;DR
-Bottom line, if your looking for the most secure self-hosted file synchronization software out there, look no further! [Sycthing](https://syncthing.net) has you covered, go check it out!
+Bottom line, if your looking for the most secure self-hosted file synchronization software out there, look no further! [Syncthing](https://syncthing.net) has you covered, go check it out!
