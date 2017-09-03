@@ -41,11 +41,13 @@ The Fabric repo provides a tool which you can compile to produce crypto material
 
 # Bootstrapping the Peer
 As mentioned previously, we need the `fabric-ca-client` binary to enroll with the Fabric CA server in order for us to begin the construction of our MSP directory. A successful enrollment with this binary will produce the following:
+
  - The ECDSA private key stored in the `keystore` directory (if SW based BCSSP is used)
  - The Enrollment x509 Certificate signed by the CA will be stored in the `signcerts` directory
  - The Fabric CA self-signed x509 root Certificate will be stored in the `cacerts` directory
 
 While this is a great start, we still need two more directories to complete our [MSP](http://hyperledger-fabric.readthedocs.io/en/latest/msp.html):
+
  - `tlscacerts` directory is needed to set up our chain of trust for TLS connections
  - `admincerts` directory must contain x509 certificates corresponding to an administrator
 
