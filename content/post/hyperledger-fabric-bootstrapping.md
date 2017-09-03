@@ -62,6 +62,7 @@ Since we wish to have the peer enroll it's self we need to create a custom entry
 **It is important to note that, for a production grade deployment, these credentials should be registered by the administrator with a `max_enrollments` set to 1. This will ensure that once these credentials are used once, they can never be re-used again.**
 
 In my [public test repository](https://github.com/gbolo/dockerfiles/tree/master/hyperledger-fabric/softhsm/compose), I use the following scripts to accomplish this:
+
  - [entrypoint.sh](https://github.com/gbolo/dockerfiles/blob/master/hyperledger-fabric/softhsm/dockerfiles/install/entrypoint.sh)
  - [entrypoint-functions.sh](https://github.com/gbolo/dockerfiles/blob/master/hyperledger-fabric/softhsm/dockerfiles/install/entrypoint-functions.sh)
 
